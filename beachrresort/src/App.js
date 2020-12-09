@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
-
+import Navigation from "./components/Navigation"
 import Home from "./pages/Home"
 import Rooms from "./pages/Rooms"
 import SingleRoom from "./pages/SingleRoom"
@@ -11,6 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Router>
+        <Navigation/>
         <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/rooms/:slug" component={SingleRoom}/>
